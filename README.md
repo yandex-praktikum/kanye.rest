@@ -1,8 +1,10 @@
 # [kanye.rest](https://kanye.rest)
-
+[![Сборка и публикация Docker-образа](https://github.com/yandex-praktikum/kanye.rest/actions/workflows/docker-publish.yml/badge.svg?branch=feature%2Fdockerize)](https://github.com/yandex-praktikum/kanye.rest/actions/workflows/docker-publish.yml)
 Аналог сервиса Kanye.rest, написанный на Express.
 Используется в качестве примера веб-приложения в уроке по докеризации сервисов в курсе "Веб-разработчик плюс" 
 Яндекс.Практикум. 
+
+Исходный проект: https://github.com/ajzbc/kanye.rest
 
 ## Сборка и запуск в Docker
 ### Сборка образа
