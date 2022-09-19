@@ -1,0 +1,26 @@
+name: "Сборка и публикация Docker-образа"
+on:
+  push:
+    branches:
+      - 'feature/dockerize'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: "Запуск и инциализация Docker BuildKitX"
+        uses: docker/setup-buildx-action@v2
+      -
+        name: "Авторизация в Github Container Registry"
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      -
+        name: "Сборка и публикация Docker-образа"
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/kanye.rest-express:latest
