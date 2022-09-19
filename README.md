@@ -1,12 +1,13 @@
 # [kanye.rest](https://kanye.rest)
 
-A free REST API for random Kanye West quotes (Kanye as a Service).
+Аналог сервиса Kanye.rest, написанный на Express.
+Используется в качестве примера веб-приложения в уроке по докеризации веб-приложения в курсе "Веб-разработчик плюс" 
+Яндекс.Практикум. 
 
-Built with [Cloudflare Workers](https://workers.cloudflare.com/).
+ 
+## Примеры использования API
 
-## Usage
-
-### `GET` [https://api.kanye.rest](https://api.kanye.rest)
+### `GET` [https://localhost:3000](https://localhost:3000)
 
 ```json
 {
@@ -14,22 +15,13 @@ Built with [Cloudflare Workers](https://workers.cloudflare.com/).
 }
 ```
 
-or
+или
 
-### `GET` [https://api.kanye.rest/text](https://api.kanye.rest/text)
+### `GET` [https://localhost:3000/text](https://localhost:3000/text)
 
 ```text
 The world is our office
 ```
 
-## Development
-
-Install [Wrangler](https://developers.cloudflare.com/workers/wrangler/get-started/#installation)
-
-```shell
-npx wrangler dev
-```
-
-## License
-
+## Лицензия
 MIT
